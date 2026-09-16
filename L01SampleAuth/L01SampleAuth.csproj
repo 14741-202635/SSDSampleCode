@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-L01SampleAuth-46301cbf-47da-4af5-ad6c-56ac85b72e90</UserSecretsId>
   </PropertyGroup>
