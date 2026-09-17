@@ -5,7 +5,7 @@ using L01SampleAuth.Models;
 using L01SampleAuth.Data;
 using Microsoft.AspNetCore.Authorization;
 
-[Authorize]
+[Authorize(Roles = "Member,Admin")]
 public class CarsController : Controller
 {
     private readonly ApplicationDbContext _context;
@@ -63,6 +63,7 @@ public class CarsController : Controller
     }
 
     // GET: CARS/Edit/5
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Edit(int? id)
     {
         if (id == null)
@@ -114,6 +115,7 @@ public class CarsController : Controller
     }
 
     // GET: CARS/Delete/5
+    [Authorize(Policy = "MohawkAdmin")]
     public async Task<IActionResult> Delete(int? id)
     {
         if (id == null)
