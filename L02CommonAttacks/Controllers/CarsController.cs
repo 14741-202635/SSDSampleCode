@@ -1,9 +1,11 @@
 
+using L02CommonAttacks.Data;
+using L02CommonAttacks.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using L02CommonAttacks.Models;
-using L02CommonAttacks.Data;
 
+[Authorize]
 public class CarsController : Controller
 {
     private readonly ApplicationDbContext _context;
@@ -47,7 +49,7 @@ public class CarsController : Controller
     // To protect from overposting attacks, enable the specific properties you want to bind to.
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
-    [ValidateAntiForgeryToken]
+    //[ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Id,Make,Model,Year,Color,Price")] Car car)
     {
         if (ModelState.IsValid)
