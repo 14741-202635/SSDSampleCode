@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="L01SampleAuth/L01SampleAuth.csproj" />
   <Project Path="L02CommonAttacks/L02CommonAttacks.csproj" Id="0e6477b9-b629-43b4-83f6-cec05f37592f" />
+  <Project Path="L03ProactiveControls/L03ProactiveControls.csproj" Id="80e024c3-990b-411c-b00d-32d2954bff5b" />
 </Solution>
