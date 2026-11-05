@@ -45,6 +45,29 @@ namespace L04Cryptography.Data.Migrations
                     b.ToTable("BankAccount");
                 });
 
+            modelBuilder.Entity("L04Cryptography.Models.BankAccountData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("DecryptedNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EncryptedNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Number")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BankAccountData");
+                });
+
             modelBuilder.Entity("L04Cryptography.Models.Password", b =>
                 {
                     b.Property<int>("Id")
